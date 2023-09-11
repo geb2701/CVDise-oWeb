@@ -1,0 +1,74 @@
+.navbarStyle{
+    background-color: #F6A833;
+    min-height: 8vh;
+}
+
+.footerStyle{
+    background-color: #F6A833;
+    text-align: right;
+    padding-left: 40px;
+    padding-right: 40px;
+    min-height: 8vh;
+}
+
+.navbarNavOptions{
+    font-size:xx-large !important;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.containerStyle{
+    margin: 100px;
+}
+
+.footerStyle a{
+    text-decoration: none;
+    color: black;
+}
+
+.footerStyle a:hover {
+    text-decoration: underline;
+    color: blue; 
+}
+
+.footerStyle ul{
+    list-style: none;
+}
+
+.main-content{
+    min-height: 84vh;
+}
+
+.main-Box{
+    min-height: 74vh;
+}
+
+.foto-perfil{
+    width: 80%;
+    border-radius: 100px;
+    padding-top: 30px;
+}
+
+.tituloStyle{
+    font-size: 92px;
+    text-align: center;
+}
+
+.aling-center{
+    align-items: center;
+    text-align: center;
+}
+
+.contenido{
+    padding: 30px !important;
+    font-size: 36px;
+    text-align: justify;
+}
+
+.listaSinPuntos{
+    list-style: none;
+}
+
+.listaLetraChico{
+    font-size: 24px;
+}
