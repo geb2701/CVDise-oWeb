@@ -15,6 +15,14 @@ let tiempoTexto
 //funcion para crear nueva partida si se llama repetir juego
 window.onload = RecargarNuevaPartida()
 function RecargarNuevaPartida(){
+    Ccolumnas = sessionStorage.getItem("Ccolumnas")
+    Cfilas = sessionStorage.getItem("Cfilas")
+    Cminas = sessionStorage.getItem("Cminas")
+
+    sessionStorage.setItem("Cfilas", 0)
+    sessionStorage.setItem("Cminas", 0)
+    sessionStorage.setItem("Ccolumnas", 0)
+
     if ((Ccolumnas>0) && (Cfilas>0) && (Cminas>0)){
         document.getElementById("TablaEntrada").setAttribute("hidden",true)
         generar_tablero()
@@ -330,6 +338,9 @@ function finDePartirda(tipo){
             cancelButtonText: `Ver Mapa`,
         }).then((result) => {
             if (result.isConfirmed) {
+                sessionStorage.setItem("Ccolumnas", Ccolumnas)
+                sessionStorage.setItem("Cfilas", Cfilas)
+                sessionStorage.setItem("Cminas", Cminas)
                 window.location.reload()
                 
             } else if (result.isDenied) {
@@ -348,8 +359,10 @@ function finDePartirda(tipo){
             cancelButtonText: `Ver Mapa`,
         }).then((result) => {
             if (result.isConfirmed) {
+                sessionStorage.setItem("Ccolumnas", Ccolumnas)
+                sessionStorage.setItem("Cfilas", Cfilas)
+                sessionStorage.setItem("Cminas", Cminas)
                 window.location.reload()
-                
             } else if (result.isDenied) {
                 window.location.reload()
             }
@@ -374,6 +387,9 @@ function reiniciar(){
         cancelButtonText: `Continuar`,
     }).then((result) => {
         if (result.isConfirmed) {
+            sessionStorage.setItem("Ccolumnas", Ccolumnas)
+            sessionStorage.setItem("Cfilas", Cfilas)
+            sessionStorage.setItem("Cminas", Cminas)
             window.location.reload()
             
         } else if (result.isDenied) {
