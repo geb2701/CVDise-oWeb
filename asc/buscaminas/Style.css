@@ -1,0 +1,130 @@
+.centrar {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.casillaBM {
+  width: 30px;
+  height: 30px;
+  background: whitesmoke;
+  border: 3px solid #555;
+}
+
+.BombaBM {
+  width: 30px;
+  height: 30px;
+  background: red;
+  border: 3px solid #555;
+}
+
+.tableBM {
+  background-color: black;
+  margin: auto;
+  border: 6px solid black;
+  margin-left: 85px;
+  margin-right: 85px;
+}
+
+.casillaA {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.cajaBandera {
+  text-align: center;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  text-decoration: none;
+  font-size: 40px;
+  border-radius: 50px;
+  background-color: white;
+  border: 5px;
+  border-color: black;
+  border-style: solid;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0%;
+}
+
+.cajaBanderaSeleccionada {
+  text-align: center;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  text-decoration: none;
+  font-size: 40px;
+  border-radius: 50px;
+  background-color: gray;
+  border: 5px;
+  border-color: black;
+  border-style: solid;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0%;
+}
+
+.cajaReiniciar {
+  text-align: center;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  text-decoration: none;
+  font-size: 40px;
+  border-radius: 50px;
+  background-color: white;
+  border: 5px;
+  border-color: black;
+  border-style: solid;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0%;
+}
+
+.btnBM {
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btnBM:hover {
+  background-color: black;
+  color: white;
+}
+.dato {
+  color: red;
+}
+
+.tablaEstadisticas {
+  width: 600px;
+}
+
+.tablaEstadisticas-2 td {
+  width: 300px;
+}
+
+.tablaEstadisticas-3 td {
+  width: 200px;
+}
