@@ -168,3 +168,15 @@
     margin:0;
 }
 
+.boton-enlace {
+    text-decoration: none;
+    display: inline-block; 
+    margin: 10px; 
+    padding: 8px 16px;
+    background-color: #F6A833;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
