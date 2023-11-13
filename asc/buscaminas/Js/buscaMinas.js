@@ -12,7 +12,7 @@ let hora=0
 let cronometro
 let tiempoTexto
 
-//funcion para crear nueva partida si se pulsa repetir juego
+//funcion para crear nueva partida si se llama repetir juego
 window.onload = RecargarNuevaPartida()
 function RecargarNuevaPartida(){
     if ((Ccolumnas>0) && (Cfilas>0) && (Cminas>0)){
@@ -314,7 +314,6 @@ function finDePartirda(tipo){
         casillasA[i].removeAttribute("onclick")
     }
     stopTimer()
-    //esto es temporal
     if(tipo=="derrota"){
         for (let i = 0; i < casillas.length; i++){
             if (casillas[i] == "bomba"){
@@ -393,6 +392,7 @@ function audio(id){
     }
 }
 
+//cargar partidas Predetermiandas
 data = [
     {"dificultad":"Muy Facil", "columnas":8,"filas":8,"minas":10},
     {"dificultad":"Facil", "columnas":10,"filas":10,"minas":16},
