@@ -361,45 +361,6 @@ function finDePartirda(tipo){
             }
         }
     }
-    guardarInfo(tipo)
-}
-
-//guardamos la irmacion en el localStorage
-function guardarInfo(tipo){
-    let cas, par, vic, der
-    if ((localStorage.getItem("casillas")!== null)&&(localStorage.getItem("casillas")!== NaN)){
-        cas = localStorage.getItem("casillas") + casillasLibres[1]
-    }
-    else{
-        cas = casillasLibres[1]
-    }
-    if ((localStorage.getItem("partidasJugadas")!== null) && (localStorage.getItem("partidasJugadas")!== NaN)){
-        par = localStorage.getItem("partidasJugadas") + 1
-    }
-    else{
-        par = 1
-    }
-    if ((localStorage.getItem("victoria")!== null) && (localStorage.getItem("victoria")!== NaN)){
-        vic = localStorage.getItem("victoria") +1
-    }
-    else{
-        vic = 1
-    }
-    if ((localStorage.getItem("derrota")!== null) && (localStorage.getItem("derrota")!== NaN)){
-        der = localStorage.getItem("derrota")+1
-    }
-    else{
-        der = 1
-    }
-
-    localStorage.setItem("casillas", cas)
-    localStorage.setItem("partidasJugadas",  par)
-    if(tipo=="derrota"){
-        localStorage.setItem("derrota", der)
-    }
-    if(tipo=="victoria"){
-        localStorage.setItem("victoria",  vic)
-    }
 }
 
 //funcion del boton para resetar la partida
@@ -432,21 +393,24 @@ function audio(id){
     }
 }
 
-//recuperar dificultades del json
-fetch('../asc/buscaminas/Js/partidas.json')
-.then((response) => response.json())
-.then((data) => {
-    const ubicacion = document.getElementById("partidasPrearmadas")
-    data.forEach(valor => {
-        
-        let td = document.createElement("td");
-        let boton = document.createElement("buttom");
-        
-        boton.setAttribute("type","button");
-        boton.setAttribute("class","btnBM");
-        boton.setAttribute("onclick","generarPartida(" + `${valor.filas}` + "," + `${valor.columnas}` + "," + `${valor.minas}` + ")");
-        boton.innerHTML = `${valor.dificultad}`;
-        td.appendChild(boton);
-        ubicacion.appendChild(td);
-    });
-})
+data = [
+    {"dificultad":"Muy Facil", "columnas":8,"filas":8,"minas":10},
+    {"dificultad":"Facil", "columnas":10,"filas":10,"minas":16},
+    {"dificultad":"Media", "columnas":15,"filas":15,"minas":40},
+    {"dificultad":"Dificil", "columnas":20,"filas":20,"minas":80},
+    {"dificultad":"Muy Dificil", "columnas":30,"filas":30,"minas":200}
+]
+
+const ubicacion = document.getElementById("partidasPrearmadas")
+data.forEach(valor => {
+    
+    let td = document.createElement("td");
+    let boton = document.createElement("buttom");
+    
+    boton.setAttribute("type","button");
+    boton.setAttribute("class","btnBM");
+    boton.setAttribute("onclick","generarPartida(" + `${valor.filas}` + "," + `${valor.columnas}` + "," + `${valor.minas}` + ")");
+    boton.innerHTML = `${valor.dificultad}`;
+    td.appendChild(boton);
+    ubicacion.appendChild(td);
+});
